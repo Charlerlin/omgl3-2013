@@ -103,7 +103,9 @@ public class Portefeuille {
 					Argent res = new Argent(trouve.devise(), trouve.montant()-a.montant());
 					largent.add(res);
 				}
-				else{};
+				else{
+					largent.add(trouve);
+				}
 				
 			}
 		}
