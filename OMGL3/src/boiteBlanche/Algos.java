@@ -1,6 +1,8 @@
 package boiteBlanche;
 
+import java.util.ArrayList;
 import java.util.Stack;
+import java.util.TreeSet;
 
 public class Algos {
 
@@ -76,4 +78,30 @@ public class Algos {
 		}
 	}
 
+	public TreeSet<Double> findRoots(double a, double b, double c) {
+		TreeSet<Double> roots = new TreeSet<Double>();
+		double disc; 
+		disc = (b * b) - (4 * a * c); 
+		if ( disc > 0 ) 
+		{ 
+			double root1 = (- b + Math.sqrt(disc)) / (2 * a); 
+			double root2 = (- b - Math.sqrt(disc)) / (2 * a); 
+
+			System.out.println("The roots are unequal and irrational " + root1 + " and " + root2);
+			roots.add(root1);
+			roots.add(root2);
+
+		} 
+		else if ( disc == 0 ) 
+		{ 
+			double root = - b / (2 * a); 
+			System.out.println("The roots are equal and rational " + root + " and " + root ); 
+			roots.add(root);
+		} 
+		else if ( disc < 0 ) 
+		{ 
+			System.out.println("The roots are imaginary"); 
+		} 
+		return roots;
+	} // function is over 
 }
