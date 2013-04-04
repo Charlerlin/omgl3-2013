@@ -40,4 +40,10 @@ public class HerlinCharlesDDT_test {
 		assertEquals(362880, a.calc("* 1 2 3 4 5 6 7 8 9"));
 		assertEquals(500, a.calc("* 5 100"));
 	}
+	@Test
+	public void withNeg(){
+		assertEquals(-1, a.calc("+ -3 2"));
+		assertEquals(-6, a.calc("* 3 -2"));
+		assertEquals(6, a.calc("* -3 -2"));
+	}
 }

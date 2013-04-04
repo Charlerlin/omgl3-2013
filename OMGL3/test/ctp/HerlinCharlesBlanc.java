@@ -21,5 +21,9 @@ public class HerlinCharlesBlanc {
 	}
 	
 	// Question 5 : indiquez par un commentaire les tests qui ont été ajoutés pour la Question 5
+	@Test
+	public void testQ5(){
+		assertArrayEquals(new int[] {0,2,0,1,0,1}, c.histogramme(new int[] {1,1,3,5}, 5));
+	}
 
 }

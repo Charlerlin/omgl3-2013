@@ -14,6 +14,7 @@ public class HerlinCharlesDDT_algo {
 			operandes[i-1] = Integer.parseInt(split[i]);
 		int res = 0;
 		if(operat.equals("+")){
+			res = 0;
 			for(int i=0; i!=operandes.length; i++)
 				res += operandes[i];
 		}
